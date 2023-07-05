@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>tut-59(js-dates)</title>
+	<style type="text/css">
+		.container
+		{
+					font-size: 24px;
+					background-color: lightpink;
+					border: 2px solid red;
+					padding: 34px;
+					margin: 4px;
+					border-radius: 10px;
+					text-align: center;
+		}	
+
+
+		#time{
+			font-weight: bold;
+		}
+	</style>
+	
+</head>
+<body>
+	<div class="container">
+		<p>THIS IS ABOUT DATES MANUPULATION</p>
+		<p>Current time is <span id="time"></span></p>
+	</div>
+	<script type="text/javascript">
+		console.log("This is date and time tutorial")
+
+		let now = new Date();
+		console.log(now);//reload kela thevha jo time asel toh print hoto
+
+		//we can mention a date we want
+		let newDate = new Date("2023-07-07");
+		console.log(newDate);
+		//on more format
+							//year,month,date,hr,min,sec,milsec
+		let bigdat = new Date(2030,4,6,7,3,2,34);//new used to create a constructor
+		console.log(bigdat);
+
+		console.log("------------------------Functions-----------------------------");
+
+			let year = newDate.getFullYear();
+			console.log("THIS IS YEAR", year);
+			//similarly we have
+
+			let dt = newDate.getDate();
+			console.log("THIS IS date", dt);
+
+			let Month = newDate.getMonth();
+			console.log("THIS IS Month", year);
+
+			let Hours = newDate.getHours();
+			console.log("THIS IS hours", Hours);
+				console.log("------------------------can we chane the date? yes definatly-----------------------------");
+
+
+			newDate.setDate(2);
+			console.log(newDate);
+			//now if you right newDate.setDate(34); so 34 is not a date but te auto-correct karun takta aplya input la and 30 nantr 2 trrik deta ,(try it out)
+			console.log("------------------------time stamps-----------------------------");
+			stamps= Date.now();
+			console.log(stamps);
+			console.log("Time stamps is 1970 nantr kiti time pass zala ahe !");
+
+			setInterval(updateTime,1000);
+
+			function updateTime() {
+				// body...
+				time.innerHTML = new Date()
+			}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>tut-49 String methods and manupilation</title>
+
+</head>
+<body>
+	<h1>tut-49 | String methods and manupilation</h1>
+		<div class="container">
+				<div id="content"></div>
+			<p>THIS IS PARAGRAPH</P>
+		</div>
+
+	<script>
+		// note that javasricpt is case-sensity so VAR is not var
+		var string_= "this";
+								// G.K
+		//when to use "" and '' . bot are valid 
+		//when you want one inside another
+		//when you want "Amey Suresh Chavan got 'placement is springCT' package is 8.5 CTC"
+		//when you want 'Amey Suresh Chavan got "the placement is springCT" package is 8.5 CTC'
+		console.log(string_);
+
+		var name =" is Amey Suresh Chavan";
+		var who = ",who have got package of 8.5 CTC";
+
+		// now if you remember then + is use to add two number 
+		// but in the string it is use to concatinate two or more string as follows
+
+		console.log(string_ + name + who );
+		//--------------------------------------------------------------------------------
+		//to add string in between
+
+
+		var tmp = `This ${name} placed in springCT ${who}`
+			//${ variable name } is use to add string in another writen string
+
+		console.log(tmp)
+		//--------------------------------------------------------------------------------
+		//some more operation on string
+		var len = name.length;
+		console.log(`The lenght of the string name is ${len}`);
+		//it will print 22
+		
+		//-------------------------------------------------------------------------------
+			//excape sequence characters:- \n \t \b 
+
+		// ANOTHER WAY OF CREATING STRING USING CONSTRUCTOR LIKE JAVA
+			var y =new String("this is a string by constructor");
+			//it will get store and you can also see the index no of string
+			console.log(y);
+
+			//little example of js string
+
+			document.getElementById('content').innerHTML = '<h3>THIS IS AN H3 HEADING BY SCRPIT</h3>'
+			// remember E ,B ,I should be capital ... i spend hr in sloving this coz its case sensitive
+			// document.getElementBy IS THE TAG (CONTENT IS A ID)
+
+	</script>
+</body>
+</html>

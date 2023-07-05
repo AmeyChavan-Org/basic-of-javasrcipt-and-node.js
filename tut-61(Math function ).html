@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>tut-61(Math object )</title>
+</head>
+<body>
+	<div class="container">
+		<h1>tut-61(Math object )</h1>
+	</div>
+
+<script>
+	let m = Math;
+	console.log(m)
+	console.log("\n printing the constants from maths object")
+	console.log("The value of Math.E is",Math.E);
+	console.log("The value of Math.LN2 is",Math.LN2);
+	console.log("The value of Math.PI is",Math.PI);
+	console.log("The value of Math.SQRT_2 is",Math.SQRT1_2);
+	console.log("The value of Math.LOG2E is",Math.LOG2E);
+	
+	// ---------------------------------------------------------------
+	console.log("\n Function of math ");
+	let a = 34.545;
+	let b = 23.435;
+
+
+	console.log("\n The value of a and b",a,b);
+
+	console.log("\n The value of rounded a and b",Math.round(a),Math.round(b));//it convert the float value into integer value
+	console.log("\npow Function-> Math.pow() ");
+
+	console.log("\n 2 rised to the power 3 is ",Math.pow(2,3));
+	
+	console.log("\n Sqaure root of 20 is  ", Math.sqrt(20));
+
+	console.log("\n Similarly like a round we have floor and ceil (Math.ceil and Math.floor) floor take round of smallest and ceil takes the round off of highest one");
+
+	
+	console.log("The ceil round(rounded-up) of value of 2.8 is ", Math.ceil(2.8));
+	console.log("The floor round(rounded-down) of value of 2.8 is ", Math.floor(2.8));	
+
+	console.log("\n Absolute value-- make the value positive ");
+	console.log("\n Absolute value of 2.5 is ", Math.abs(2.5));
+	console.log("\n Absolute value of -2.5 is ", Math.abs(-2.5));
+
+	console.log("\n trigonometric function(note value is given in radian not in degree , soo use Pi)");
+	console.log("\n The value of sin(pi) is ", Math.sin(Math.PI));
+	console.log("\n The value of sin(pi/2) is ", Math.sin(Math.PI/2));
+
+	console.log("\nTHE MIN AND MAX FUNCTION ->Math.min/max");
+
+	console.log("\n Minimum of the 10 ,15,26 is", Math.min(10,15,26));
+	console.log("\n Minimum of the 10 ,15,26 is", Math.max(10,15,26));
+
+	console.log("\n IN THE CASE , you want to develop capcha the randow function is used");
+
+	let r = Math.random();//give ramdom number between 0 to 1
+	//give ramdom number between 0 to 100, we have to apply logic
+	//logic is (a,b)= a+(b-a)*Math.random()
+	let a1=1
+	let b1=100
+	let r1 = a1+(b1-a1)*Math.random();
+
+	console.log("\n THE RANDOM NO. IS ",r);
+	console.log("\n THE RANDOM NO. IS ",r1);
+
+</script>
+
+</body>
+</html>

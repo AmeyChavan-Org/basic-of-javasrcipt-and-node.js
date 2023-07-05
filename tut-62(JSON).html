@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>tut-62()</title>
+	<style>
+		.container{
+			background-color: pink;
+			border: 2px solid red;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1>THIS IS TUT_62(JSON WORKING)</h1>
+		<p>JSON IS SIMPLY a notation throught which you can transport your data ..like sending a object in js through network! </p>
+		<em>JSON.stringify</em>
+		<p>convert js object into string</p>
+		<em>JSON.parse</em>
+		<p>convert js string into Object</p>
+	</div>
+	<script type="text/javascript">
+		let jsonobj ={
+			name:"Amey",
+			company:"SpringCT",
+			package:8.5,
+			position:"web-developer"
+		}
+		console.log(jsonobj);
+
+		console.log("\nnow the help of json we can convert this object into string , basically transposting object into string ");
+
+		let jsonstr = JSON.stringify(jsonobj);//JSON.stringify is a keyword
+
+		console.log(jsonstr);
+		console.log("\nnow it is converted into string and can be transfer anywhere , even we can performn string operation");
+		
+		
+		console.log("\n if we want to change data in this string");
+		jsonstr = jsonstr.replace("web-developer","Sr.web-developer");
+		console.log(jsonstr);
+		
+
+		console.log("\n we convert object into string , can we do string to object?");
+			
+		newobj = JSON.parse(jsonstr); //it is complusary to pass here a valid string or else it will give you error - JSON PARSE ERROR.
+
+		console.log("new object of a string using parse is",newobj);
+
+	</script>
+</body>
+</html>

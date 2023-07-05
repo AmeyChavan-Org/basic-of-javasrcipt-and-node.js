@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>tut-51(scope,if else condition and switch case)</title>
+</head>
+<body>
+	<div>
+		<ul>
+				<li>Item-1</li>
+				<li>Item-1</li>
+				<li>Item-1</li>
+				<li>Item-1</li>
+				<li>Item-1</li>
+				<li>Item-1</li>
+				<li>Item-1</li>
+		</ul>
+	</div>
+
+		<script type="text/javascript">
+			var string1 = "This is demo string!"
+			var string1 = "This is demo string! which is re-updated!"
+
+			console.log(string1);
+			// if we talk about scope of variable just like C/Java and all
+			// then var is having GLOBAL SCOPE 
+			// so what about if you what to keep the scope of variable local to a specific block?
+			// let is a better solution for this thing
+
+
+			let a = "This let has a global scope ";
+			// let a = "it will give error is this statement is declare ,coz let is already been declare!";
+
+			{
+				let a = "it has a scope only in this block ,so if we print it ,we can it"
+				//this is a block
+				console.log(a);
+			}	
+
+				// but if we print a outside block it will print statement of previsioly declare a 
+				console.log(a);
+
+				// so in total let is better option than var, so now onwards we will use let
+// ------------------------------------------------------------------------------------------------------------
+// we saw global and local variable
+				// now how to declare canstant?
+
+
+				const c = "This is a constan variable which can not be changed!"
+				// c = "why cannot changed? it will give error"
+				console.log(c);
+				//when to use const -> when you think u can accidentaly change the variable that time
+				// when to use let -> when u know in future you might change the value of variable that time
+// --------------------------------------------------------------------------------------------------------------
+				// conditional statement
+
+				console.log("---------------------if else/ladder statement-----------------------");
+
+	age = 21;
+
+	if (age<=18) 
+	{
+		console.log("You cannot drink Alocohol!");
+	}
+	else if(age<=12)
+	{
+		console.log("You can drink water only");
+
+	}
+	else(age>=20)
+	{
+		console.log("You can drink Alocohol!");
+	}
+		//	this is mostly used for validation like if @ is missing in gmail/ if name is not mentioned
+
+					console.log("---------------------switch case statement-----------------------")
+	
+	const caps = 2;
+
+		switch(caps)
+					{
+						// remember apn ithe ":" use karto ";" hai nhi chutiya sakha nako semi-comma deu
+					case 1:
+						console.log("The value of caps is 1");
+						break;
+
+					case 2:
+						console.log("The value of caps is 2");
+						break;
+
+					case 3:
+						console.log("The value of caps is 3");
+						break;
+
+					case 4:
+						console.log("The value of caps is 4");
+						break;
+					
+					case 5:
+						console.log("The value of caps is 5");
+						break;
+
+					default:
+						console.log("The value of caps is none of the above..it is grater than 5!");
+						break;													
+
+					}
+
+// NOTE:- you can use both if else or switch case depends on you (konta use kela tari chalta)... but mostly apanif else use karto
+
+		</script>
+</body>
+</html>

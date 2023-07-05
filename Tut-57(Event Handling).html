@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Tut-57(Event Handling)</title>
+	<!-- Event is something which occur on your browser like clicking on button ...clicking on particular link etc
+	1. now this event can be listen by us and can perform certain task depending on the event -->
+	<style type="text/css">
+		
+		#btn{
+			padding: 10px 15px;
+			background-color: lightpink;
+			border: 2px solid black;
+			color: white;
+			font-weight: bold;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+
+		#para{
+			border: 2px solid red;
+			border-radius: 10px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="container">
+		<h1>Tut-57(Event Handling)</h1>
+		<p id="para">list of Browser events:-
+		1.onclick
+		2.contextmenu :- occur when you right click on the mouse
+		3.mouseover:- mouse on the event
+		4.mouseout:- mouse came out of one event (button varun mouse side la gela)
+		5.mousedown:- mouse cha button dabbu thevla ahe(pressed)
+		6.mouseup:- mouse cha button sodla ki mouse-up hota(released) 
+		7.mousemove
+
+		8.submit
+		9.focus
+
+		10.DOMContentLoaded:- when entire html is loaded then it is fire!
+		
+		
+		11. transitionend:- if you are using css transition then it will happen
+	</p>
+
+	<button id="btn" onclick="togglehide()">Show/Hide</button>
+	<!-- onclick is the name of the event -->
+		
+		<script type="text/javascript">
+			let para = document.getElementById('para');
+
+			para.addEventListener("mouseover", function run(){
+				console.log("mouse inside para");
+			});
+			para.addEventListener("mouseout", function run(){
+				console.log("mouse outside para");
+			});
+
+
+
+
+
+
+
+
+
+			function togglehide(){
+				let btn = document.getElementById('btn');//modern browser madhe hai nhi lihila tari chalta te id in target karta and gheta(but its a good practice to write )
+				let para = document.getElementById('para');
+				//ithe apna elements id ni ghetle
+				if(para.style.display != "none")// jr none nasel tr none kara ,,
+				{
+					para.style.display ="none";
+
+				}
+				else//none asel tr block kara
+				{
+					para.style.display ="block";					
+				}
+			}
+		</script>
+	</div>
+</body>
+</html>

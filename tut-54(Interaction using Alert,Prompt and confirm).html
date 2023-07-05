@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>tut-54(Interaction using Alert,Prompt and confirm)</title>
+</head>
+<body>
+	<h1>IMP TOPIC FOR JS</h1>
+	<div class="container">
+		THIS IS PAGE
+	</div>
+
+
+	<script type="text/javascript">
+				// alert in in-browser in javascript
+
+				//Alert is similar like -1. Applet's Dialoge box(modal dialoge box)
+									  // 2.bootstrap madhe pn asto tyla apan modal bolto nusta
+										// 3. Also Alert kahi return nhi karat its just a warning to user (jila ok kelya shivya user dusri kahi action perform nhi karu sakat!)
+
+				alert("THIS IS A ALERT MESSAGE!");//it does not return anything!
+				alert("Read the instruction clearly");
+
+				// what is prompt?
+				// sometimes you whant to ask details from user , at that time you use prompt 
+				// for example :- if you are developing a gaming website and you want to ask user what is your name?
+
+				let name = prompt("What is your name gamer?","I,m Guest")//here we have given two arguments
+								//1st what we want // 2nd if nothing is given then the 2nd(im guest) argument is taken as a input
+
+				console.log("Name given to prompt is->",name);
+
+				//what is confirm?
+				// confirm is for double checking for ex- is you want to delete a post/image or anything our smart phones asks
+				// us twice - are you sure to delete it! 
+
+				let deletepost = confirm("Do you really wan to delete this post");
+				// console.log(deletepost); (we can uncomment it and check the boolean output)
+
+				if(deletepost)//if true
+				{	
+					//you can write the code to delete the code
+					console.log("Your post has been deleted",deletepost);
+
+				}
+				else
+				{
+					//you can write the code to not to delete the code
+					console.log("Your post is not been deleted", deletepost);
+				}
+	</script>
+</body>
+</html>
+
+
+<!-- //H.W :- what is your age , and if 18+ allow to club , if not then dont allow to club -->

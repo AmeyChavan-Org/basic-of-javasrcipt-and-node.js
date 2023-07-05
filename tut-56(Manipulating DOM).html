@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>tut-56(Manipulating DOM)</title>
+</head>
+<body>
+	<p>DOM:-it is Document Object Moduling , We can use is and In the tree like herarchy we can access HTML by JS</p>
+	<div id="main" class="container">
+		<ul id="nav">
+			<li>HOME</li>
+			<li>ABOUT US</li>
+			<li>SERVICES</li>
+			<li>CONTACT US</li>
+
+		</ul>
+
+	</div>
+
+	<div class="container">
+		THIS IS ANOTHER CLASS CONTAINER
+	</div>
+	<script type="text/javascript">
+		//for DOM navigation
+		let main = document.getElementById('main');
+		console.log(main);
+
+		let nav = document.getElementById('nav');//yecha throught apn id la target karun Js la html cha ty particular part cha acess deto ..ani tyla edit js madhe karu sakto 
+		console.log(nav)
+
+		// if you write
+		// nav.innerHTML is console then it will return all inside element in the form of string
+
+		// why we used it ?
+		// for dynamic changes
+		// you can change the element by console in HTML 
+		// nav.innerHTML = "<li>Dynamic element edit</li>" write this in console and see what happens
+
+
+		// we have done this using ID , can we do the same using CLASS?
+
+
+		let container = document.getElementById('container');
+		console.log(container); 
+
+		//here we can apply all the selector of CSS
+
+		let sel = document.querySelector('#nav');
+		console.log("Selector returns",sel)
+
+
+		//we can even use pseudo selector like first child / last child wagara
+
+		console.log("\n--------------------difference bag----------------------------------------")
+
+		let sel1 = document.querySelector('#nav>li');
+		console.log("Selector returns",sel1)
+
+		let sel2 = document.querySelectorAll('#nav');//this will return the first li
+		console.log("Selector returns",sel2)//this we return a node list of all the li
+
+
+		//mostly use get element by class name , query Selector and ID
+	</script>
+</body>
+</html>

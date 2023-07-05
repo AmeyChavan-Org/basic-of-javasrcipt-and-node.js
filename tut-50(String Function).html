@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>tut-50(String Function)</title>
+</head>
+<body>
+	<script>
+		var amey = "This is a String";
+		console.log(amey);
+
+		//function in string to manipulate
+		var position = amey.indexOf("is");
+		console.log(position)
+		//INDEX VALUE IS 2, IT WILL GIVE FIRST OCCRANCE
+
+		//FOR LAST OCCARANCE
+		var last = amey.lastIndexOf("is");
+		console.log(last)
+
+		//SUB - STRING FORM STRING
+		//IT requried two para-meter (start and end)
+		var substr = amey.slice(1,9);//index no 1=h upto 9=a--> it should print "his is a"
+		//it also take negative indexes 1 to n
+		console.log(substr)
+		//there are multiple method to do this
+		//for-example
+		var method1 = amey.substring(1,9);
+		console.log(method1)
+		//it cannot take negative indexes IMP for interview
+
+		var method2 = amey.substr(1,9);
+		//1 se chalu karo aur 9 charachter lo , not 9th indexes tak jao ! thats the difference
+		console.log(method2)
+
+		//TO REPLACE THE STRING
+
+		var replacing = amey.replace('string','replaced string');
+		console.log(amey);
+		console.log(replacing);
+		//the orginal string will not change , replacement of string is store in variable "replacing"
+
+
+		//how to convert in upper case or lower case
+
+		console.log(amey.toUpperCase());
+		console.log(amey.toLowerCase());
+
+		//to concate new string (add string)
+
+		var newstring = amey.concat(" and this is concatinated String");
+		console.log(newstring);
+		//I would suggest that mostly you should use + instead of concat function it is better
+
+		//for removing white spaces
+
+		var spaces = "      this a er        whitespaces                       "
+		console.log(spaces);
+		console.log(spaces.trim());
+		//it will remove spaces from start and end but not from middle
+
+
+
+		//now we have seen how to add the charachter in string but how to extract charachter form string?
+
+		var char3 = amey.charAt(8);
+		console.log("charachter at index no:- 8 is " ,char3);
+
+		//how to get charcode (this is not much imp )
+		var char4 = amey.charCodeAt(8);
+		console.log("charachter code of char at index no:- 8 is " ,char4);
+
+		//how to do slicing?
+		console.log(amey[2]);
+
+
+		//this is all about function of string ...once all the things is done then we will develop website.
+	</script>
+</body>
+</html>

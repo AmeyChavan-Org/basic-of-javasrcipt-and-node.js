@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>tut-60(Arrow function)</title>
+	<style>
+		.container{
+			border: 2px solid red;
+			border-radius: 5px;
+			background-color: lightblue;
+			padding: 23px;
+			margin:20px;
+		}
+		p{
+			text-align: center;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		this is arrow function tutorial
+		<p>
+			Arrow function(=>) is use has a short cut for creating a function 
+		</p>
+		<p>
+			by arrow function you dont have to write function or even return
+		</p>
+
+	</div>
+
+	<script type="text/javascript">
+			console.log("<-------normal function------->");
+			function great(){
+				console.log("good morning Amey");
+			}
+			great();
+
+					console.log("<-------Arrow function------->");
+
+			greet = () =>{
+				console.log("very good morning Amey")//=> represent the function
+			}		
+
+			greet();
+
+
+			console.log("<-------Arrow function------->");
+
+
+			let sum  = (a,b) =>{
+				return a+b;
+			}
+			//javascrpit madhe ajun chota karu sakto
+
+			console.log("<-------Arrow function more simplify------->");
+
+				let sum1  = (a,b) =>a+b;
+				//so main moto ata tari function nahi lihita bus arrow function lihycha ani short madhe code rum karycha !
+
+				//ek argument asel tr bracket lavla nhi tari chalta haa but 2 argument asel tr bracket lagel
+
+				let half = a => a/2;
+				//more example - jr argument nasel tr empty bracket dycha ahe ..okay!
+
+				let name = () => console.log("empty bracket cha example");
+
+				console.log("------------IMP------------------");
+
+				let obj1={
+					greeting:"good morning",
+					names :["Amey","tejas","aryan"],
+					speak(){
+						this.names.forEach((student)=>{
+							console.log(this.greeting + " hello " + student);//ata this chi property aste ki tycha above most function la toh target karto but ithe arrow function ahe so mhanun above most function "arrow function" ahe so tyla ignore karun toh baher wala jo obj ahe (greeting ) tyla point karel(parent la )
+							//lasical this boltat yela (interview)
+
+							//jr forEach (function(student )) asta tr undefined lihun ala asta tithe
+
+						});
+					}
+				}
+
+				obj1.speak();//this is method of obj1
+	</script>
+</body>
+</html>

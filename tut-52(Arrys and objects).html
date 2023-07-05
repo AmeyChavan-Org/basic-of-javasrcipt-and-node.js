@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>tut-52(Arrys and objects)</title>
+</head>
+<body>
+	<h1>tut-52(Arrys and objects) THIS IS IMP TOPIC</h1>
+	<script type="text/javascript">
+		// if we talk about variables in JS , then area of two type 
+			// 1. primetive as follows
+
+		let myvar = 32;	//this is integer
+		let myvar1 = "Amey Suresh Chavan"; //this is string
+		let myvar2 = true; //this is boolen
+		let myvar3 = undefined // this is not defined character
+		let myvar4 = null // null value is assigned
+
+			//2.instead of primative any other thing which we declare is objects, just like what in java.
+			//object is the key-value pair.
+		let employee = {
+			name :"Amey Suresh Chavan",
+			salary : 8.5 ,
+			Compant : "SpringCT",
+
+		}
+		console.log(employee);
+		//if you see this in console the type is object
+		//This is manually declared objects , by-default we have array
+		// -----------------------------------------------------------------------------------------------------------
+
+		 console.log("-------------------ARRAYS-------------------");
+
+		 	let name = [1,2,50 ,"Amey",undefined];
+		 	console.log(name);
+		 	console.log("You might have observed that the array is taking heterogenous types but C/java does not allow this thing!");
+
+		 	console.log("At index 2 we have no:-",name[2]);
+
+		 	console.log("-------------Another way of declaring Array is by new keyword like JAVA---------------");
+
+		 	let names = new Array(1,2,50 ,"Amey Chava","This array is declare by new",undefined);
+		 	console.log(names)
+
+		 	// function in array
+
+		 	console.log(names.length);
+
+		 	console.log("How many elements are there in array names \n",names.length);
+
+		 	names_sort=names.sort();
+		 	console.log("Array after sorting",names_sort);
+
+		 	console.log("how to add element in array");
+
+
+		 	names.push("this is added element");
+		 	console.log(names);
+		 	// ------------------------------------------------------------------------------
+
+		 	console.log("how to declare 20 Array");
+
+		 	let name1 = new Array(20);
+		 	console.log(name1);
+	</script>
+</body>
+</html>

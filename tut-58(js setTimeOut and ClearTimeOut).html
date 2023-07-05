@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>tut-58(js setTimeOut and ClearTimeOut)</title>
+</head>
+	<style type="text/css">
+		.container{
+			padding: 18px 20px;
+			border: 2px solid red;
+			background-color: lightblue;
+			border-radius: 5px;
+		}
+	</style>
+<body>
+	<div class="container">
+		<h1>tut-58(js setTimeOut and ClearTimeOut):-</h1>
+		<p>What is setTimeOut and ClearTimeOut?</p>
+		<em>->it is used when you want some function to start after particular interval of time , or want to repeat it for particular time .</em>
+		<p>setTimeout-> Allows us to run the function once(only once) after the interval of time. </p>
+		<p>clearTimeOut-> Allows us to run the function repeatedly after the interval of time.</p> 
+	</div>
+	<span id="time">Span with id =time</span>
+	<script type="text/javascript">
+		console.log("tut-58(js setTimeOut and ClearTimeOut)");
+
+		// setTimeout-> Allows us to run the function once(only once) after the interval of time. 
+		// clearTimeOut-> Allows us to run the function repeatedly after the interval of time.
+
+		function greet(){
+			console.log("Hello Sir , Welcome to the office");
+		}
+
+		setTimeout(greet,2000);//first argument is function , secound is time delay in minute
+		console.log("\n-------------------------------We can also write it like---------------------");
+
+
+		function greet1(name){
+			console.log("Hello " +name+ " Sir , Welcome to the office");
+		}
+			setTimeout(greet1,2000,"Amey");
+    
+		// timeOut=setTimeout(greet,2000,"Amey");
+		// console.log(timeOut);//yecha ek time out ID tayar hoto jo use karu sakto apan
+
+		// clearTimeout(timeOut);
+
+
+		// remember you have to write greet1 not greet1() , coz you are calling the function not making the function
+		
+		console.log("\n-------------------------------Clear timeout---------------------");
+		console.log("\nfor ex- let condition ghe! ");
+		console.log("\n if tu ek website banavli jecha madhe 20s nantr user la msg jato ki - do you want to login?(by setTimeout) ");
+		console.log("\n but jr user in 20sec cha at login kela tr , there is no use of setTimeout , so ty situation sathi apan clear time out use karnr( if else condition laun)");
+
+		console.log("\n-------------------------------Clear timeout---------------------");
+
+		console.log("\n-------------------------------set interval(use for repeats)---------------------");
+
+
+		setInterval(greet1,10000,"Amey");//it will get print in every 1-min
+
+		// ata jasa clearTimeOut hota tasa aplya kadhe clearInterval pn ahe haa..
+
+
+		intervarID = setInterval(greet1,3000,"Amey");
+		// console.log(intervarID)-> if you print this you will get its id = 4
+		clearInterval(intervarID);//this will make it not to print
+
+		// ----------------------------------------------------------------------------------------------------------------
+
+
+
+		function displayTime() {
+			// body...
+			time = new Date();
+			console.log(time);
+			document.getElementById('time').innerHTML = time;
+		}
+
+		setInterval(displayTime ,1000);
+
+	</script>
+</body>
+</html>
